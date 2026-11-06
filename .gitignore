@@ -1,0 +1,32 @@
+# ===== Keil MDK 编译产物 =====
+task/MDK-ARM/FreeRTOS_F407VET6/
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.dep
+*.iex
+*.lnp
+*.sct
+*.build_log.htm
+*.uvguix.*
+
+# ===== 编辑器 / IDE =====
+.vscode/
+**/.vscode/
+
+# ===== WorkBuddy 工作区数据 =====
+.workbuddy/
+
+# ===== 重构前的历史备份 =====
+task/_backup_rs485/
+
+# ===== 空目录 / 系统文件 =====
+task/MDK-ARM/新建文件夹/
+Thumbs.db
+Desktop.ini
+.DS_Store
