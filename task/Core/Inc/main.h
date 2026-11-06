@@ -67,6 +67,8 @@ void Error_Handler(void);
 #define D3_GPIO_Port GPIOA
 #define MAX485_EN_Pin GPIO_PIN_7
 #define MAX485_EN_GPIO_Port GPIOE
+#define W5500_SCS_Pin GPIO_PIN_13
+#define W5500_SCS_GPIO_Port GPIOE
 
 /* USER CODE BEGIN Private defines */
 

@@ -30,3 +30,10 @@ task/MDK-ARM/新建文件夹/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# ===== 回退备份（2026-11-06 CubeMX 实验） =====
+_backup_*/
+
+# ===== 编辑器/手工备份 =====
+*.bak
+*.bak*

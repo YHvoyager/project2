@@ -5,6 +5,7 @@
 #include "usart.h"
 #include "APP/APP_TempHumiPoll.h"
 #include "Modbus.h"
+#include "W5500.H"
 
 /* 启动任务的配置 */
 #define START_TASK_STACK 256
@@ -74,6 +75,7 @@ void freertos_start(void)
 // @ 简介：启动任务用来创建其他task
 // @ 参数：
 uint8_t TempumiPoll_status = 0;
+uint8_t W5500_Task_status = 0;
 void start_task(void *pvParameters)
 {
     /* 进入临界区代码:保护临界区里的代码不会被打断 */
@@ -88,6 +90,16 @@ void start_task(void *pvParameters)
     else
     {
         printf("[TH] task create fail\r\n");
+    }
+
+    W5500_Task_status = W5500_TaskCreate();
+    if (W5500_Task_status == pdPASS)
+    {
+        printf("[W5500_Task] task create success\r\n");
+    }
+    else
+    {
+        printf("[W5500_Task] task create fail\r\n");
     }
     
        task1_handle = xTaskCreateStatic(
